@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script src="build/spine-player.js"></script>
+	<link rel="stylesheet" href="css/spine-player.css">
+		<title>Spine Web Player Test</title>
+	</head>
+    <style>
+        body {
+            background: gray;
+            margin: 0px;
+        }
+        </style>
+	<body>
+		<div id="container" style="width: 640px; height: 480px"></div>
+	</body>
+    <script>
+       new spine.SpinePlayer("container", {
+		skelUrl: "assets/spineboy-pro.skel",
+		atlasUrl: "assets/spineboy-pma.atlas",
+		animation: "walk",
+		premultipliedAlpha: true,
+		backgroundColor: "#cccccc",
+		viewport: {
+			debugRender: false,
+		},
+		showControls: true,
+	});
+    </script>
+</html>
